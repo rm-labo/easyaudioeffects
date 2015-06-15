@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>jquery.easyAudioEffects.js</title>
+   <meta name="description" content="Easily set up sound effects to HTML elements" />
+   <meta name="keywords"    content="html5 , audio , jquery , plugin" />
+   <meta property="og:title"       content="jquery.easyAudioEffects.js">
+   <meta property="og:description" content="jqueryEasily set up sound effects to HTML elements">
+   <meta property="og:type"      content="website">
+   <meta property="og:site_name" content="jquery.easyAudioEffects.js">
+   <meta property="fb:app_id"    content="378485365683261">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+   <link href='demo/css/demo.css' rel='stylesheet' type='text/css'>
+   <script src="./assets/js/jquery-1.11.1.min.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+   <link href='https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css' rel='stylesheet' type='text/css'>
+   <link href='https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css' rel='stylesheet' type='text/css'>
+
+   <!-- Link easyaudioeffects's js -->
+   <script src="./jquery.easyaudioeffects.1.0.0.min.js"></script>
+
+   <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-63335117-1', 'auto');
+     ga('send', 'pageview');
+   </script>
+
+</head>
+<body id="easyaudioeffects">
+
+   <nav id="nav" class="nav">
+      <ul class="nav__nav-list">
+         <li class="nav__nav-list__item">
+            <a class="nav__nav-list__item__hit" href="#about">About</a>
+         </li>
+         <li class="nav__nav-list__item">
+            <a class="nav__nav-list__item__hit" href="#usage">Usage</a>
+         </li>
+         <li class="nav__nav-list__item">
+            <a class="nav__nav-list__item__hit" href="#examples">Examples</a>
+         </li>
+         <li class="nav__nav-list__item">
+            <a class="nav__nav-list__item__hit" href="#licence">Licence</a>
+         </li>
+      </ul>
+   </nav>
+
+   <section id="main-visual" class="section section--main">
+      <h1 class="section--main__title">EasyAudioEffects.js</h1>
+      <p class="section--main__caption">
+         Easily set up sound effects to HTML elements <i class="fa fa-volume-up fa-lg"></i>
+      </p>
+      <a class="section--main__btn" href="https://github.com/rm-labo/easyaudioeffects" target="_blank">
+         <span>
+            <i class="fa fa-github fa-lg"></i>
+            <small>Download on</small>
+            GitHub
+         </span>
+      </a>
+      <p class="section--main__ver">
+         Latest Version : v1.0.0<br />
+         with jQuery - v1.7.0 or Later.
+      </p>
+
+      <div class="section--main__waveform">
+         <svg class="waveform" xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 64 34" preserveAspectRatio="none" >
+            <path class="blue">
+               <animate attributeName="d" values="
+               M0 16
+               C0 16 0 16 0 16
+               C0 16 0 16 0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               ;
+               M0 16
+               C0 16 0 16 0 16
+               C6 16 8 24 16 24
+               C24 24 24 0 32 0
+               C40 0 40 24 48 24
+               C56 24 58 16 64 16
+               C64 16 64 16 64 16
+               ;
+               M0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               C64 16 64 16 64 16
+               C64 16 64 16 64 16
+               "
+               dur="12s"
+               repeatCount="indefinite" />
+            </path>
+
+            <path class="red">
+               <animate attributeName="d" values="
+               M0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               C64 16 64 16 64 16
+               C64 16 64 16 64 16
+               ;
+               M0 16
+               C0 16 0 16 0 16
+               C6 16 8 24 16 24
+               C24 24 24 0 32 0
+               C40 0 40 24 48 24
+               C56 24 58 16 64 16
+               C64 16 64 16 64 16
+               ;
+               M0 16
+               C0 16 0 16 0 16
+               C0 16 0 16 0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               "
+               dur="24s"
+               repeatCount="indefinite" />
+            </path>
+
+            <path class="green">
+               <animate attributeName="d" values="
+               M0 16
+               C0 16 0 16 0 16
+               C0 16 0 16 0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               ;
+               M0 16
+               C0 16 0 16 0 16
+               C6 16 8 24 16 24
+               C24 24 24 0 32 0
+               C40 0 40 24 48 24
+               C56 24 58 16 64 16
+               C64 16 64 16 64 16
+               ;
+               M0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               C64 16 64 16 64 16
+               C64 16 64 16 64 16
+               "
+               dur="8s"
+               repeatCount="indefinite" />
+            </path>
+
+            <path class="green">
+               <animate attributeName="d" values="
+               M0 16
+               C0 16 0 16 0 16
+               C0 16 0 16 0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               ;
+               M0 16
+               C0 16 0 16 0 16
+               C6 16 8 24 16 24
+               C24 24 24 0 32 0
+               C40 0 40 24 48 24
+               C56 24 58 16 64 16
+               C64 16 64 16 64 16
+               ;
+               M0 16
+               C6 16 8 8 16 8
+               C24 8 24 32 32 32
+               C40 32 40 8 48 8
+               C56 8 58 16 64 16
+               C64 16 64 16 64 16
+               C64 16 64 16 64 16
+               "
+               dur="8s"
+               repeatCount="indefinite" />
+            </path>
+
+         </svg>
+      </div>
+      <canvas class="section--main__canvas" id="c" width="2000" height="500"></canvas>
+   </section>
+
+   <section class="section" id="about">
+      <h1 class="section__title">About</h1>
+      <div class="wrapper">
+         <p class="section__text">
+            <strong>easyAudioEffects.js</strong>
+            easyAudioEffects.js is jquery plug-in.
+            This can be given a very easy sound effects for any of the elements on your WEB site.
+         </p>
+         <p class="section__text">
+            <i class="fa fa-angle-right"></i>
+            <a href="http://caniuse.com/#feat=audio" target="_blank">compatible browser</a>
+         </p>
+         <p class="note">
+            <i class="fa fa-exclamation-triangle"></i>
+            This plug-in is the reaction slightly in Safari is slow. (Jun , 2015)
+         </p>
+      </div>
+   </section>
+
+   <section class="section" id="usage">
+      <h1 class="section__title">Usage</h1>
+
+      <section class="sub-section">
+         <div class="wrapper">
+            <h1 class="sub-section__title">Basic Usage</h1>
+
+            <pre class="brush: js" title="Include necessary JS files">
+               <script src="jquery.js"></script> //v1.7.0〜
+               <script src="jquery.easyAudioEffects.js"></script>
+            </pre>
+            <p class="note">
+               <i class="fa fa-exclamation-triangle"></i>
+               jQuery v1.7.0 or later.
+            </p>
+
+            <pre class="brush: js" title="Set audio files (Both *.ogg and *.mp3 are required)">
+               $('.selector').easyAudioEffects({
+                  ogg : "/path/to/sound.ogg",
+                  mp3 : "/path/to/sound.mp3"
+               });
+            </pre>
+         </div>
+      </section>
+
+      <section class="sub-section">
+         <div class="wrapper">
+            <h1 class="sub-section__title">Available Options</h1>
+            <table class="table-basic">
+               <thead>
+                  <tr>
+                     <th>Parameter</th>
+                     <th>Type</th>
+                     <th>Default value</th>
+                     <th>Description</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>ogg</th>
+                     <td>string</td>
+                     <td><span class="text-sub">none</span></td>
+                     <td class="left">
+                        Specify the file path <strong>Required</strong>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>mp3</th>
+                     <td>string</td>
+                     <td><span class="text-sub">none</span></td>
+                     <td class="left">
+                        Specify the file path <strong>Required</strong>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>eventType</th>
+                     <td>string</td>
+                     <td>"hover"</td>
+                     <td class="left">
+                        Could be
+                        <strong>"hover"</strong>
+                        or
+                        <strong>"click"</strong>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>playType</th>
+                     <td>string</td>
+                     <td>"oneShotPolyphonic"</td>
+                     <td class="left">
+                        Could be
+                        <strong>"oneShotPolyphonic"</strong> ,
+                        <strong>"oneShotMonophonic"</strong> ,
+                        <strong>"gate"</strong>
+                        or
+                        <strong>"loop"</strong>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </section>
+   </section>
+
+
+   <section class="section" id="examples">
+
+      <h1 class="section__title">Examples</h1>
+
+      <section class="sub-section">
+         <div class="wrapper">
+            <h1 class="sub-section__title">eventType : </h1>
+            <div class="center" style="margin-top: 40px;">
+               <div id="trigger-2-hover" class="sound-trigger sound-trigger--type-default-2 sound-trigger--type-hover">
+                  <p class="sound-trigger__speach">HOVER!</p>
+                  <div class="sound-trigger__inner">
+                     <i class="fa fa-volume-up fa-lg"></i>
+                  </div>
+               </div>
+
+               <div id="trigger-2-click" class="sound-trigger sound-trigger--type-default sound-trigger--type-click">
+                  <p class="sound-trigger__speach">CLICK!</p>
+                  <div class="sound-trigger__inner">
+                     <i class="fa fa-volume-up fa-lg"></i>
+                  </div>
+               </div>
+            </div>
+
+            <script type="text/javascript">
+               $(function(){
+                  $('#trigger-2-hover').easyAudioEffects({
+                     ogg : "./assets/audio/chime.ogg",
+                     mp3 : "./assets/audio/chime.mp3",
+                     eventType : 'hover'
+                  });
+                  $('#trigger-2-click').easyAudioEffects({
+                     ogg : "./assets/audio/chime.ogg",
+                     mp3 : "./assets/audio/chime.mp3",
+                     eventType : 'click'
+                  });
+               });
+            </script>
+
+            <pre class="brush: js highlight:[4]">
+               $('.selector').easyAudioEffects({
+                  ogg : "./path/to/sound.ogg",
+                  mp3 : "./path/to/sound.mp3",
+                  eventType : "hover" // or "click"
+               });
+            </pre>
+         </div>
+      </section>
+
+      <hr class="sep" />
+
+      <section class="sub-section">
+         <div class="wrapper">
+            <h1 class="sub-section__title">playType : </h1>
+         </div>
+         <div style="max-width: 920px; margin: auto;">
+            <img src="demo/images/playtype.png" width="100%" alt="">
+         </div>
+         <div class="wrapper">
+            <section>
+               <h1 class="sub-section__sub-title">playType : "oneShotPolyphonic"</h1>
+               <div class="center" style="margin-top: 60px;">
+                  <div class="oneShotPolyphonic-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotPolyphonic-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotPolyphonic-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotPolyphonic-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <p class="sound-trigger__speach" style="width:100px; margin-left:-25px;">TRACE!</p>
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotPolyphonic-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotPolyphonic-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotPolyphonic-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+               </div>
+               <div class="swipe-example">
+                  <div class="swipe-example__child">
+                     <i class="fa fa-hand-o-left"></i>
+                  </div>
+               </div>
+               <div class="center" style="margin-top: 40px;">
+                  <div class="oneShotPolyphonic-click sound-trigger sound-trigger--type-default sound-trigger--type-click">
+                     <p class="sound-trigger__speach">BARRAGE!</p>
+                     <div class="sound-trigger__inner">
+                        <i class="fa fa-volume-up fa-lg"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <script type="text/javascript">
+                  $(function(){
+                     $('.oneShotPolyphonic-hover').easyAudioEffects({
+                        ogg : "./assets/audio/chime.ogg",
+                        mp3 : "./assets/audio/chime.mp3",
+                        eventType : "hover",
+                        playType : "oneShotPolyphonic"
+                     });
+                     $('.oneShotPolyphonic-click').easyAudioEffects({
+                        ogg : "./assets/audio/chime.ogg",
+                        mp3 : "./assets/audio/chime.mp3",
+                        eventType : "click",
+                        playType : "oneShotPolyphonic"
+                     });
+                  });
+               </script>
+
+               <pre class="brush: js highlight:[5]">
+                  $('.selector').easyAudioEffects({
+                     ogg : "./path/to/sound.ogg",
+                     mp3 : "./path/to/sound.mp3",
+                     eventType : "hover", // or "click"
+                     playType : "oneShotPolyphonic"
+                  });
+               </pre>
+            </section>
+
+            <hr class="sep" />
+
+            <section>
+               <h1 class="sub-section__sub-title">playType : "oneShotMonophonic"</h1>
+               <div class="center" style="margin-top: 60px;">
+                  <div class="oneShotMonophonic-trigger-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotMonophonic-trigger-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotMonophonic-trigger-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotMonophonic-trigger-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <p class="sound-trigger__speach" style="width:100px; margin-left:-25px;">TRACE!</p>
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotMonophonic-trigger-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotMonophonic-trigger-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+                  <div class="oneShotMonophonic-trigger-hover sound-trigger sound-trigger--type-small-2 sound-trigger--type-hover">
+                     <div class="sound-trigger__inner"><i class="fa fa-volume-up fa-lg"></i></div>
+                  </div>
+               </div>
+               <div class="swipe-example">
+                  <div class="swipe-example__child">
+                     <i class="fa fa-hand-o-left"></i>
+                  </div>
+               </div>
+               <div class="center" style="margin-top: 40px;">
+                  <div class="oneShotMonophonic-trigger-click sound-trigger sound-trigger--type-default sound-trigger--type-click">
+                     <p class="sound-trigger__speach">BARRAGE!</p>
+                     <div class="sound-trigger__inner">
+                        <i class="fa fa-volume-up fa-lg"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <script type="text/javascript">
+                  $(function(){
+                     $('.oneShotMonophonic-trigger-hover').easyAudioEffects({
+                        ogg : "./assets/audio/chime.ogg",
+                        mp3 : "./assets/audio/chime.mp3",
+                        eventType : 'hover',
+                        playType : 'oneShotMonophonic'
+                     });
+                     $('.oneShotMonophonic-trigger-click').easyAudioEffects({
+                        ogg : "./assets/audio/chime.ogg",
+                        mp3 : "./assets/audio/chime.mp3",
+                        eventType : 'click',
+                        playType : 'oneShotMonophonic'
+                     });
+                  });
+               </script>
+
+               <pre class="brush: js highlight:[5]">
+                  $('.selector').easyAudioEffects({
+                     ogg : "./path/to/sound.ogg",
+                     mp3 : "./path/to/sound.mp3",
+                     eventType : "hover", // or "click"
+                     playType : "oneShotMonophonic"
+                  });
+               </pre>
+            </section>
+
+            <hr class="sep" />
+
+            <section>
+               <h1 class="sub-section__sub-title">playType : "gate"</h1>
+               <div class="center" style="margin-top: 40px;">
+                  <div class="gate-trigger-hover sound-trigger sound-trigger--type-default-2 sound-trigger--type-hover">
+                     <p class="sound-trigger__speach">HOVER!</p>
+                     <div class="sound-trigger__inner">
+                        <img src="./demo/images/cat.svg" style="width:40px; padding-top:30px;" alt="">
+                     </div>
+                  </div>
+                  <div class="gate-trigger-click sound-trigger sound-trigger--type-default sound-trigger--type-click">
+                     <p class="sound-trigger__speach">CLICK!</p>
+                     <div class="sound-trigger__inner">
+                        <img src="./demo/images/cat.svg" style="width:40px; padding-top:30px;" alt="">
+                     </div>
+                  </div>
+               </div>
+               <script type="text/javascript">
+                  $(function(){
+                     $('.gate-trigger-hover').easyAudioEffects({
+                        ogg : "./assets/audio/cat.ogg",
+                        mp3 : "./assets/audio/cat.mp3",
+                        eventType : 'hover',
+                        playType : 'gate'
+                     });
+                     $('.gate-trigger-click').easyAudioEffects({
+                        ogg : "./assets/audio/cat.ogg",
+                        mp3 : "./assets/audio/cat.mp3",
+                        eventType : 'click',
+                        playType : 'gate'
+                     });
+                  });
+               </script>
+
+               <pre class="brush: js highlight:[5]">
+                  $('.selector').easyAudioEffects({
+                     ogg : "./path/to/sound.ogg",
+                     mp3 : "./path/to/sound.mp3",
+                     eventType : "hover", // or "click"
+                     playType : "gate"
+                  });
+               </pre>
+            </section>
+
+            <hr class="sep" />
+
+
+            <section>
+               <h1 class="sub-section__sub-title">playType : "loop"</h1>
+               <div class="center" style="margin-top: 40px;">
+                  <div class="loop-trigger-hover sound-trigger sound-trigger--type-default-2 sound-trigger--type-hover">
+                     <p class="sound-trigger__speach">HOVER!</p>
+                     <div class="sound-trigger__inner">
+                        <i class="fa fa-volume-up fa-lg"></i>
+                     </div>
+                  </div>
+                  <div class="loop-trigger-click sound-trigger sound-trigger--type-default sound-trigger--type-click">
+                     <p class="sound-trigger__speach">CLICK!</p>
+                     <div class="sound-trigger__inner">
+                        <i class="fa fa-volume-up fa-lg"></i>
+                     </div>
+                  </div>
+               </div>
+               <script type="text/javascript">
+                  $(function(){
+                     $('.loop-trigger-hover').easyAudioEffects({
+                        ogg : "./assets/audio/numbness.ogg",
+                        mp3 : "./assets/audio/numbness.mp3",
+                        eventType : 'hover',
+                        playType : 'loop'
+                     });
+                     $('.loop-trigger-click').easyAudioEffects({
+                        ogg : "./assets/audio/numbness.ogg",
+                        mp3 : "./assets/audio/numbness.mp3",
+                        eventType : 'click',
+                        playType : 'loop'
+                     });
+                  });
+               </script>
+
+               <pre class="brush: js highlight:[5]">
+                  $('.selector').easyAudioEffects({
+                     ogg : "./path/to/sound.ogg",
+                     mp3 : "./path/to/sound.mp3",
+                     eventType : "hover", // or "click"
+                     playType : "loop"
+                  });
+               </pre>
+            </section>
+         </div>
+      </section>
+   </section>
+
+   <section class="section" id="licence">
+      <h1 class="section__title">Licence</h1>
+      <div class="wrapper">
+         <p class="section__text">
+            easyAudioEffects.js licensed under MIT license.<br />
+            You are free to use easyAudioEffects.js for your personal or commercial websites projects.
+         </p>
+         <p class="section__text">
+            The latest source code is available on <a href="https://github.com/rm-labo/easyaudioeffects" target="_blank">GitHub</a>.
+         </p>
+
+         <div style="padding-top:20px; text-align:center;">
+            <div style="display:inline-block;">
+               <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+            <div style="display:inline-block;">
+               <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer class="footer">
+      <a class="footer__btn-top" href="#pagetop"><i class="fa fa-chevron-up"></i></a>
+      <small>Made by RM</small>
+   </footer>
+
+
+   <script type="text/javascript">
+      $(function(){
+         $('a').easyAudioEffects({
+            ogg : "./assets/audio/pi.ogg",
+            mp3 : "./assets/audio/pi.mp3",
+            eventType : 'hover'
+         });
+      });
+   </script>
+   <script src="demo/js/demo.min.js"></script>
+
+   <div id="fb-root"></div>
+   <script>(function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=378485365683261";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+</html>
