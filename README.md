@@ -2,7 +2,7 @@
 
 ## Demo
 
-Demo is <a href="http://rm-labo.com/labo/easyaudioeffects/" target="_blank">here</a>.
+Demo is <a href="http://rm-labo.github.io/easyaudioeffects/" target="_blank">here</a>.
 
 ## About
 
@@ -16,14 +16,14 @@ Include necessary JS files
 
     <script src="jquery.js"></script> //v1.7.0〜
     <script src="jquery.easyAudioEffects.js"></script>
-    
+
 Set audio files (Both *.ogg and *.mp3 are required)
 
     $('.selector').easyAudioEffects({
        ogg : "/path/to/sound.ogg",
        mp3 : "/path/to/sound.mp3"
     });
-    
+
 ###Available Options
 
 
@@ -90,7 +90,7 @@ Set audio files (Both *.ogg and *.mp3 are required)
        mp3 : "./path/to/sound.mp3",
        eventType : "hover" // or "click"
     });
-    
+
 ### playType :
 
 #### playType : "oneShotPolyphonic"
@@ -110,7 +110,7 @@ Set audio files (Both *.ogg and *.mp3 are required)
        eventType : "hover", // or "click"
        playType : "oneShotMonophonic"
     });
-    
+
 #### playType : "gate"
 
     $('.selector').easyAudioEffects({
